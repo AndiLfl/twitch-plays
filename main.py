@@ -2,6 +2,7 @@ import twitch
 import keypresser
 import keyholder
 import os
+import time
 import dotenv
 
 dotenv.load_dotenv()
@@ -14,7 +15,7 @@ t.twitch_connect(username, key)
 
 while True:
     new_messages = t.twitch_recieve_messages()
- 
+
     if not new_messages:
         continue
     else:
@@ -25,8 +26,5 @@ while True:
 
             if msg == "w": keyholder.holdForSeconds(msg, 0.3)
             if msg == "s": keyholder.holdForSeconds(msg, 0.3)
-            if msg == "a": keyholder.holdForSeconds(msg, 0.1)
-            if msg == "d": keyholder.holdForSeconds(msg, 0.1)
-            if msg == "e": keyholder.holdForSeconds(msg, 0.5)
-            if msg == "q": keyholder.holdForSeconds(msg, 0.1)
-            if msg == "t": keyholder.holdForSeconds(msg, 0.5)
+            if msg == "a": keyholder.holdForSeconds(msg, 0.3)
+            if msg == "d": keyholder.holdForSeconds(msg, 0.3)
